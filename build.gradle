@@ -1,0 +1,29 @@
+apply plugin: 'scala'
+
+
+repositories {
+     mavenCentral()
+}
+
+dependencies {
+	compile 'org.scala-lang:scala-library:2.11.1'
+
+     testCompile "junit:junit:4.11"
+     testCompile "org.scala-lang:scala-library:2.11.1"
+}
+
+compileScala {
+    scalaCompileOptions.useCompileDaemon = true
+
+    // optionally specify host and port of the daemon:
+    scalaCompileOptions.daemonServer = "localhost:4243"
+}
+
+tasks.withType(ScalaCompile) {
+    configure(scalaCompileOptions.forkOptions) {
+        memoryMaximumSize = '1g'
+        scalaCompileOptions.useAnt = false
+        jvmArgs = ['-XX:MaxPermSize=512m']
+    }
+}
+

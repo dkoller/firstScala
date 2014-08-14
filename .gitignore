@@ -1,1 +1,17 @@
 /bin/
+
+.gradle/2.0/taskArtifacts/cache.properties
+
+.gradle/2.0/taskArtifacts/cache.properties.lock
+
+.gradle/2.0/taskArtifacts/fileHashes.bin
+
+.gradle/2.0/taskArtifacts/fileSnapshots.bin
+
+.gradle/2.0/taskArtifacts/outputFileStates.bin
+
+.gradle/2.0/taskArtifacts/taskArtifacts.bin
+
+.settings/gradle/org.springsource.ide.eclipse.gradle.core.prefs
+
+.settings/org.scala-ide.sdt.core.prefs
